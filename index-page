@@ -1,0 +1,51 @@
+class Flight:
+    def __init__(self, origin, destination, departure_date, return_date):
+        self.origin = origin
+        self.destination = destination
+        self.departure_date = departure_date
+        self.return_date = return_date
+
+    def search_flights(self):
+        # Code to search for flights based on origin, destination, departure, and return dates
+        # Return a list of available flights
+
+        # Placeholder implementation
+        flights = [
+            {'airline': 'Airline 1', 'price': 200, 'departure_time': '10:00 AM', 'arrival_time': '1:00 PM'},
+            {'airline': 'Airline 2', 'price': 250, 'departure_time': '2:00 PM', 'arrival_time': '5:00 PM'},
+            {'airline': 'Airline 3', 'price': 180, 'departure_time': '8:00 AM', 'arrival_time': '11:00 AM'}
+        ]
+        return flights
+
+
+class Hotel:
+    def __init__(self, location, check_in_date, check_out_date):
+        self.location = location
+        self.check_in_date = check_in_date
+        self.check_out_date = check_out_date
+
+    def search_hotels(self):
+        # Code to search for hotels based on location, check-in, and check-out dates
+        # Return a list of available hotels
+
+        # Placeholder implementation
+        hotels = [
+            {'name': 'Hotel 1', 'price': 100, 'rating': 4},
+            {'name': 'Hotel 2', 'price': 150, 'rating': 5},
+            {'name': 'Hotel 3', 'price': 120, 'rating': 3}
+        ]
+        return hotels
+
+
+# Example usage
+flight_search = Flight('New York', 'Paris', '2023-07-01', '2023-07-10')
+flights = flight_search.search_flights()
+print("Available Flights:")
+for flight in flights:
+    print(f"Airline: {flight['airline']}, Price: {flight['price']}, Departure: {flight['departure_time']}, Arrival: {flight['arrival_time']}")
+
+hotel_search = Hotel('Paris', '2023-07-01', '2023-07-10')
+hotels = hotel_search.search_hotels()
+print("\nAvailable Hotels:")
+for hotel in hotels:
+    print(f"Hotel: {hotel['name']}, Price: {hotel['price']}, Rating: {hotel['rating']}")
